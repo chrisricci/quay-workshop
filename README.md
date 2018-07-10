@@ -43,4 +43,5 @@ $ oc new-app quay.io/<org_name>/hello-world-instrumented:v1
 1. From the Tags section of the repository, click on the security scan results
 2. Back on the repository settings, create a notification for when vulnerabilities are discovered
 3. Select Medium vulnerability and choose email as the notification method.  Verify the selected email address if required.
-4. Make a change to the app, trigger a new build and verify that the email is triggered once the scan completes
+4. Change the base image in the Dockerfile to `python:3.7-rc` and commit the change to trigger a new build.
+5. The new build should contain several high vulnerabilities.  Verify that the email is triggered once the scan completes
