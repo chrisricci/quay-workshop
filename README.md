@@ -45,3 +45,10 @@ $ oc new-app quay.io/<org_name>/hello-world-instrumented:v1
 3. Select Medium vulnerability and choose email as the notification method.  Verify the selected email address if required.
 4. Change the base image in the Dockerfile to `python:3.7-rc` and commit the change to trigger a new build.
 5. The new build should contain several high vulnerabilities.  Verify that the email is triggered once the scan completes
+
+**Explore Time Machine**
+1. Navigate to the Tags section of the repository
+2. Select one of the tags and delete it 
+3. Navigate to Tag History to view the changes to image tags
+4. On the delete event, click on the link to restore the tag
+5. Navigate back to the Tags section and observe that the tag has been restored
